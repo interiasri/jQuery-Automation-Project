@@ -1,0 +1,7 @@
+<suite name="JQuery Project">
+	<test name="TestCases">
+		<classes>
+			<class name="DriverFactory.AppTest"></class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [JQuery Automation Testing]">
+  <test thread-count="5" name="TestCases(failed)">
+    <classes>
+      <class name="DriverFactory.AppTest">
+        <methods>
+          <include name="interActions"/>
+        </methods>
+      </class> <!-- DriverFactory.AppTest -->
+    </classes>
+  </test> <!-- TestCases(failed) -->
+</suite> <!-- Failed suite [JQuery Automation Testing] -->
