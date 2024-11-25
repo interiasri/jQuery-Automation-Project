@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-JQuery_Project" class="show-methods passed suite-JQuery_Project"> (show)</a> <!-- show-methods passed suite-JQuery_Project -->
                     </span>
                     <div class="method-list-content passed suite-JQuery_Project">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-JQuery_Project" title="DriverFactory.AppTest" class="method navigator-link" hash-for-method="interActions">interActions</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-JQuery_Project" title="DriverFactory.AppTest" class="method navigator-link" hash-for-method="widgets">widgets</a> <!-- method navigator-link -->
@@ -124,6 +129,13 @@
               <span class="class-name">DriverFactory.AppTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="interActions">
+                  </a> <!-- interActions -->
+                  <span class="method-name">interActions</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="widgets">
@@ -185,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'widgets')
+data.setCell(0, 1, 'interActions')
 data.setCell(0, 2, 'DriverFactory.AppTest')
-data.setCell(0, 3, 42256);
+data.setCell(0, 3, 72796);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'widgets')
+data.setCell(1, 2, 'DriverFactory.AppTest')
+data.setCell(1, 3, 26188);
 window.suiteTableData['JQuery_Project']= { tableData: data, tableDiv: 'times-div-JQuery_Project'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-JQuery_Project">
               </div> <!-- times-div-JQuery_Project -->
             </div> <!-- times-div -->
@@ -215,16 +231,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-JQuery_Project" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">DriverFactory.AppTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">interActions</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-JQuery_Project" class="panel">
@@ -235,8 +244,12 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">DriverFactory.AppTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">widgets</span>
+                <span class="method-name">interActions</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">widgets</span>
+                <span class="method-start">72803 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

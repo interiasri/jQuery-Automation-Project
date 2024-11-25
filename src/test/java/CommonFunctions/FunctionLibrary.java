@@ -1,6 +1,5 @@
 package CommonFunctions;
 
-import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
@@ -273,25 +272,66 @@ public class FunctionLibrary {
 	public static void typeAction(String locatorType, String locatorValue, String testData) throws Throwable {
 		
 		if(locatorType.equalsIgnoreCase("id")) {
-			
 			driver.findElement(By.id(locatorValue)).sendKeys(testData);
-			
-			
+			Thread.sleep(2000);
+			WebElement listBox=driver.findElement(By.id("ui-id-1"));
+			if(listBox.isDisplayed()) {
+				List<WebElement> itemName=listBox.findElements(By.tagName("li"));
+				for(int i=0; i<itemName.size(); i++) {
+					String iname=itemName.get(i).getText();
+					if(iname.equalsIgnoreCase(testData)) {
+						itemName.get(i).click();
+						break;
+					}
+				}
+			}
 		}
-		else if(locatorType.equalsIgnoreCase("name")) {
+		if(locatorType.equalsIgnoreCase("name")) {
 			driver.findElement(By.name(locatorValue)).sendKeys(testData);
 			Thread.sleep(2000);
+			WebElement listBox=driver.findElement(By.id("ui-id-1"));
+			if(listBox.isDisplayed()) {
+				List<WebElement> itemName=listBox.findElements(By.tagName("li"));
+				for(int i=0; i<itemName.size(); i++) {
+					String iname=itemName.get(i).getText();
+					if(iname.equalsIgnoreCase(testData)) {
+						itemName.get(i).click();
+						break;
+					}
+				}
+			}
 			
 		}
-		else if(locatorType.equalsIgnoreCase("xpath")) {
+		if(locatorType.equalsIgnoreCase("xpath")) {
 			driver.findElement(By.xpath(locatorValue)).sendKeys(testData);
-			
+			Thread.sleep(2000);
+			WebElement listBox=driver.findElement(By.id("ui-id-1"));
+			if(listBox.isDisplayed()) {
+				List<WebElement> itemName=listBox.findElements(By.tagName("li"));
+				for(int i=0; i<itemName.size(); i++) {
+					String iname=itemName.get(i).getText();
+					if(iname.equalsIgnoreCase(testData)) {
+						itemName.get(i).click();
+						break;
+					}
+				}
+			}
 			
 		}
-		else if(locatorType.equalsIgnoreCase("className")) {
+		if(locatorType.equalsIgnoreCase("className")) {
 			driver.findElement(By.xpath(locatorValue)).sendKeys(testData);
-			
-			
+			Thread.sleep(2000);
+			WebElement listBox=driver.findElement(By.id("ui-id-1"));
+			if(listBox.isDisplayed()) {
+				List<WebElement> itemName=listBox.findElements(By.tagName("li"));
+				for(int i=0; i<itemName.size(); i++) {
+					String iname=itemName.get(i).getText();
+					if(iname.equalsIgnoreCase(testData)) {
+						itemName.get(i).click();
+						break;
+					}
+				}
+			}
 		}
 		else {
 			Reporter.log(locatorType+" is not valid");
