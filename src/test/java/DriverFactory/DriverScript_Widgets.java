@@ -85,6 +85,14 @@ public class DriverScript_Widgets {
 							FunctionLibrary.typeAction(locatorType, locatorValue, testData);
 							logger.log(LogStatus.INFO, description);
 						}
+						if(objType.equalsIgnoreCase("getItemFromListBox")) {
+							FunctionLibrary.getItemFromListBox(locatorType, locatorValue, testData);
+							logger.log(LogStatus.INFO, description);
+						}
+						if(objType.equalsIgnoreCase("SlideAction")) {
+							FunctionLibrary.SlideAction(locatorType, locatorValue);
+							logger.log(LogStatus.INFO, description);
+						}
 						status=true;
 					} catch (Exception e) {
 						Reporter.log(e.getMessage(),true);

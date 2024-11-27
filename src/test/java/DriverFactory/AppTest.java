@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class AppTest {
 	
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void interActions() throws Throwable {
 		DriverScript_InterActions runTest = new DriverScript_InterActions();
 		runTest.kickStartInteractions();

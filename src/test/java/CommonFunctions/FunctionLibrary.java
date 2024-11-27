@@ -338,7 +338,72 @@ public class FunctionLibrary {
 		}
 	}
 	
-//	getText
+//	getItemFromListBox
+	public static void getItemFromListBox(String locatorType, String locatorValue, String testData) throws Throwable {
+		if(locatorType.equalsIgnoreCase("xpath")) {
+			WebElement listBox=driver.findElement(By.xpath(locatorValue));
+			List<WebElement> items=listBox.findElements(By.tagName("li"));
+			for(int i=0; i<items.size(); i++) {
+				String itemName=items.get(i).getText();
+				if(itemName.equalsIgnoreCase(testData)) {
+					items.get(i).click();
+					Thread.sleep(2000);
+					break;
+				}
+			}
+		}
+		if(locatorType.equalsIgnoreCase("id")) {
+			WebElement listBox=driver.findElement(By.id(locatorValue));
+			List<WebElement> items=listBox.findElements(By.tagName("li"));
+			for(int i=0; i<items.size(); i++) {
+				String itemName=items.get(i).getText();
+				if(itemName.equalsIgnoreCase(testData)) {
+					items.get(i).click();
+					Thread.sleep(2000);
+					break;
+				}
+			}
+		}
+		if(locatorType.equalsIgnoreCase("name")) {
+			WebElement listBox=driver.findElement(By.name(locatorValue));
+			List<WebElement> items=listBox.findElements(By.tagName("li"));
+			for(int i=0; i<items.size(); i++) {
+				String itemName=items.get(i).getText();
+				if(itemName.equalsIgnoreCase(testData)) {
+					items.get(i).click();
+					Thread.sleep(2000);
+					break;
+				}
+			}
+		}
+		else{
+			Reporter.log(locatorType+" is not valid");
+		}
+	}
+	
+//	SlideAction
+	public static void SlideAction(String locatorType, String locatorValue) {
+		Actions act = new Actions(driver);
+		if(locatorType.equalsIgnoreCase("xpath")) {
+			act.clickAndHold(driver.findElement(By.xpath(locatorValue)));
+			act.moveByOffset(150, 0);
+			act.build().perform();
+		}
+		if(locatorType.equalsIgnoreCase("id")) {
+			act.clickAndHold(driver.findElement(By.id(locatorValue)));
+			act.moveByOffset(150, 0);
+			act.build().perform();
+		}
+		if(locatorType.equalsIgnoreCase("name")) {
+			act.clickAndHold(driver.findElement(By.name(locatorValue)));
+			act.moveByOffset(150, 0);
+			act.build().perform();
+		}
+		else {
+			Reporter.log(locatorType+" is not valid");
+		}
+		
+	}
 	
 	
 //	Testing All Functions-Demo Test
